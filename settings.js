@@ -100,10 +100,10 @@ LINK_WHITELIST: "youtube.com,github.com",
           DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
 
-          OWNER_NUMBER: process.env.OWNER_NUMBER || "98300 63209",
+          OWNER_NUMBER: process.env.OWNER_NUMBER || "923189523095",
 // add your bot owner number
 
-OWNER_NAME: process.env.OWNER_NAME || "Hy_Buddy",
+OWNER_NAME: process.env.OWNER_NAME || "Hy_BAD ATIF",
 // add bot owner name
 
               DESCRIPTION: process.env.DESCRIPTION || "*© Powered By Lucky Tech Hub*",
