@@ -6,7 +6,39 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "",
+SESSION_ID: process.env.SESSION_ID || "name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start application
+      run: npm start",
 // add your Session Id make sure it starts with lucky~
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
@@ -24,13 +56,13 @@ LINK_WHITELIST: "youtube.com,github.com",
         AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
 
-        AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
+        AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "seen my status 👀🐍",
 // make true if you want auto reply on status 
 
-        AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "false",
+        AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "🐍",
 // make true if you want auto reply on status 
 
-        AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*Just seen ur status 😆*",
+        AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*Just seen ur status 😆😍😁*",
 // set the auto reply massage on status reply  
 
 
@@ -65,13 +97,13 @@ LINK_WHITELIST: "youtube.com,github.com",
       CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
 // chose custom react emojis by yourself 
 
-          DELETE_LINKS: process.env.DELETE_LINKS || "false",
+          DELETE_LINKS: process.env.DELETE_LINKS || "remove",
 // automatic delete links witho remove member 
 
-          OWNER_NUMBER: process.env.OWNER_NUMBER || "",
+          OWNER_NUMBER: process.env.OWNER_NUMBER || "923189523095",
 // add your bot owner number
 
-OWNER_NAME: process.env.OWNER_NAME || "",
+OWNER_NAME: process.env.OWNER_NAME || "BAD_ATIF",
 // add bot owner name
 
               DESCRIPTION: process.env.DESCRIPTION || "*© Powered By Lucky Tech Hub*",
